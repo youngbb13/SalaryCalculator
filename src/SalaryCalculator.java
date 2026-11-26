@@ -7,4 +7,14 @@ public class SalaryCalculator {
     public BigDecimal calculateDayPay(int dayHours) {
         return BigDecimal.valueOf(dayHours).multiply(dayShift);
     }
+
+    public BigDecimal calculateNightPay(int nightHours) {
+        return BigDecimal.valueOf(nightHours).multiply(nightShift);
+    }
+
+    public BigDecimal calculateTotalWithoutPremium(BigDecimal dayPay, BigDecimal nightPay) {
+        return dayPay.add(nightPay);
+    }
+
+
 }
