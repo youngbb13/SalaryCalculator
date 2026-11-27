@@ -16,5 +16,11 @@ public class SalaryCalculator {
         return dayPay.add(nightPay);
     }
 
+    public BigDecimal calculatePremium(int OverallHours) {
+        return BigDecimal.valueOf(OverallHours).multiply(dayShift).multiply(new BigDecimal("0.15"));
+    }
 
+    public BigDecimal calculateOverall(BigDecimal totalWithBonus, BigDecimal Premium) {
+        return totalWithBonus.add(Premium);
+    }
 }
